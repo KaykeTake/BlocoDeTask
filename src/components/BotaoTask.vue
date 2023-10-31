@@ -1,11 +1,11 @@
 <template>
-    <input type="button" @click="enviar" value="Save">
+    <input type="button" @click="enviar" id="botao" value="SAVE">
 </template>
 <script>
 export default{
     name: "BotaoTask",
     methods:{
-        //enviado a confimação da ação de click no button para seu componente pai
+        //enviando a confimação da ação de click no button para seu componente pai
         enviar(){
             this.$emit('receber', 'clicado')
         }
@@ -13,4 +13,13 @@ export default{
 }
 
 </script>
-<style scoped></style>
+<style scoped>
+    #botao{
+        background-color: #00DEE1;
+        color: black;
+        cursor: pointer;
+        font-weight: bolder;
+        width: 167px;
+        height: 30px;
+    }
+</style>
